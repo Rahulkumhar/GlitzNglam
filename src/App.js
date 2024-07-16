@@ -1,4 +1,3 @@
-//import logo from "./logo.svg";
 import "./App.css";
 import { Button, Container } from "@mui/material";
 import Header from "./Component/Header";
@@ -7,6 +6,8 @@ import Footer from "./Component/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Component/Home";
 import Cart from "./Component/Cart";
+import Login from "./Component/Login";
+import SignUp from "./Component/SignUp";
 
 const App = () => {
   return (
@@ -14,11 +15,11 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/products" element={<ProductsList />} />
         <Route path="/cart" element={<Cart />} />
-        {/* <Route path='/contact' element={<Contact/>} /> */}
       </Routes>
-      <Button variant="contained">Click Me</Button>
       <Footer />
     </div>
   );

@@ -10,7 +10,10 @@ export const DataProvider = ({ children }) => {
     const savedData = localStorage.getItem("cartProducts");
     return savedData ? JSON.parse(savedData) : [];
   });
-
+  const [login, setLogin] = useState(() => {
+    const savedLogin = localStorage.getItem("loginDetails");
+    return savedLogin ? JSON.parse(savedLogin) : {};
+  });
   console.log("datadatadatadatadatadata", data);
 
   // Use useEffect to update localStorage whenever data changes
@@ -24,9 +27,8 @@ export const DataProvider = ({ children }) => {
     console.log("newDatanewDatanewDatanewData", newData);
     setData(newData);
   };
-
   return (
-    <DataContext.Provider value={{ data, updateData }}>
+    <DataContext.Provider value={{ data, updateData, login, setLogin }}>
       {children}
     </DataContext.Provider>
   );

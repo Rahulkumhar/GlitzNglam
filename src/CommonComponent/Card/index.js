@@ -7,19 +7,21 @@ import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import Necklace from "../../Assests/necklace.jpg";
+import Necklace from "../../Assets/necklace.jpg";
 import { Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../../DataProvider";
+import ShareIcon from "@mui/icons-material/Share";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-const CardComponent = ({ item }) => {
+const CardComponent = ({ item, id }) => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const { data, updateData } = useContext(DataContext);
+  const [favoriteButton, setFavoriteButton] = useState(true);
 
   useEffect(() => {
     if (Array.isArray(data)) setItems(data);
@@ -27,6 +29,7 @@ const CardComponent = ({ item }) => {
   const checkIsAlreadyInCart = () => {
     return items.find(({ id }) => item?.id === id);
   };
+
   const addToCart = () => {
     let newItems = [];
     if (checkIsAlreadyInCart(item)) {
@@ -39,8 +42,9 @@ const CardComponent = ({ item }) => {
     // Store the updated array in localStorage
     updateData(newItems);
     // localStorage.setItem("cartProducts", JSON.stringify(newItems));
-    // navigate("/cart");
+    navigate("/cart");
   };
+
   return (
     <Card sx={{ width: "100%" }}>
       <CardHeader
@@ -73,8 +77,11 @@ const CardComponent = ({ item }) => {
           </IconButton>{" "}
           {checkIsAlreadyInCart() ? "Remove from cart" : "Add to cart"}
         </Button>
-        <IconButton aria-label="add to favorites">
-          <ShoppingCartIcon />
+        <IconButton
+          aria-label="add to favorites"
+          onClick={() => setFavoriteButton(!favoriteButton)}
+        >
+          {favoriteButton ? <FavoriteBorderIcon /> : <FavoriteIcon />}
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />

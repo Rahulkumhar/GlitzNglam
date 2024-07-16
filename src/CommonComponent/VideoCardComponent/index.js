@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import JewelleryVideo from "../../Assests/JewelleryVideo.mp4";
+import JewelleryVideo from "../../Assets/JewelleryVideo.mp4";
 import PaperComponent from "../PaperComponent";
 
 const VideoCardComponent = () => {

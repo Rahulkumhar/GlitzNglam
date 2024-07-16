@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -60,22 +60,22 @@ import { DataContext } from "../../DataProvider";
 // }));
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [cartCount, setCartCount] = React.useState(0);
-  const { data, updateData } = React.useContext(DataContext);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+  const [cartCount, setCartCount] = useState(0);
+  const { data, updateData, login, setLogin } = useContext(DataContext);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const navigate = useNavigate();
 
-  // React.useEffect(() => {
-  //   // Retrieve the array from localStorage when the component mounts
-  //   const storedItems = localStorage.getItem("cartProducts");
-  //   if (storedItems) {
-  //     setCartCount(JSON.parse(storedItems).length);
-  //   }
-  // }, []);
+  useEffect(() => {
+    // Retrieve the array from localStorage when the component mounts
+    const storedItems = localStorage.getItem("cartProducts");
+    if (storedItems) {
+      setCartCount(JSON.parse(storedItems).length);
+    }
+  }, []);
   console.log("data", data);
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -92,6 +92,13 @@ const Header = () => {
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("loginDetails");
+    localStorage.removeItem("cartProducts");
+    setLogin({});
+    rediectHome("/login");
   };
 
   const menuId = "primary-search-account-menu";
@@ -111,8 +118,8 @@ const Header = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>{login?.email}</MenuItem>
+      <MenuItem onClick={logout}>logout</MenuItem>
     </Menu>
   );
 
@@ -135,24 +142,13 @@ const Header = () => {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={cartCount?.length} color="error">
+          <Badge badgeContent={data?.length} color="error">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>Cart</p>
       </MenuItem>
-      {/* <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem> */}
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -163,7 +159,7 @@ const Header = () => {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>{login?.email}</p>
       </MenuItem>
     </Menu>
   );
@@ -187,15 +183,7 @@ const Header = () => {
           >
             Glitz & Glam
           </Typography>
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
+
           <Box sx={{ flexGrow: 1 }}>
             <Typography
               variant="h6"

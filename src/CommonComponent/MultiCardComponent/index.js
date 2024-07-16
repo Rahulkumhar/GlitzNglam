@@ -11,7 +11,7 @@ const MultiCardComponent = ({ list }) => {
         marginBottom={2}
         style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
       >
-        {list.map((item) => (
+        {list?.map((item) => (
           <Grid item xs={6} md={6}>
             <CardComponent item={item} key={item?.id} />
           </Grid>

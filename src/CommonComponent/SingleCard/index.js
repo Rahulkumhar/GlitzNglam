@@ -1,7 +1,7 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import Necklace from "../../Assests/necklace.jpg";
+import Necklace from "../../Assets/necklace.jpg";
 
 const SingleCardComponent = () => {
   return (

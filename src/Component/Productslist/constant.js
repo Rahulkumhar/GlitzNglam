@@ -11,7 +11,7 @@ import {
   GoldNecklace4,
   GoldNecklace5,
   GoldNecklace6,
-} from "../../Assests";
+} from "../../Assets";
 const products = {
   list1: [
     {
@@ -116,78 +116,6 @@ const products = {
       description:
         "22k purity with gross weight of 47 grams and Matching Earrings ",
       image: GoldNecklace6,
-    },
-    {
-      label: "Product 2",
-      id: 13,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 14,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 15,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 16,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 17,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 18,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 19,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 20,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
-    },
-    {
-      label: "Product 2",
-      id: 21,
-      amount: 19000,
-      quantity: 1,
-      description: "This is product 2",
-      image: "",
     },
   ],
 };
