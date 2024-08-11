@@ -16,17 +16,17 @@ const images = [
   {
     label: "Diamond Sets",
     imgPath:
-      "https://images.unsplash.com/photo-1588444968576-f8fe92ce56fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpYW1vbmQlMjBuZWNrbGFjZXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://manubhai.in/img/shop_products/9A80970B-0F86-4AD8-ADF2-3AA9F0E7FAC7.jpg",
   },
   {
     label: "Gold Necklace Sets",
     imgPath:
-      "https://media.istockphoto.com/id/982488252/photo/pearl-kundan-jewelry-neck-set-with-earrings-closeup-macro-image-with-black-background.webp?b=1&s=170667a&w=0&k=20&c=SYhcWUX7NIkjOrZ3MaBDZE6mmB1ecyEjl7APU-p0LJg=",
+      "https://manubhai.in/img/slider/tradition_with_twist_web_banner.jpg",
   },
   {
     label: "Gold Bracelets and Bangles",
     imgPath:
-      "https://www.joyalukkas.in/media/catalog/product/d/s/ds1700035907_10.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
+      "https://i.pinimg.com/736x/aa/9a/aa/aa9aaab4820b7fb0cd2b4b9a5c1eb2d5.jpg",
   },
   {
     label: "Silver Jewellery",

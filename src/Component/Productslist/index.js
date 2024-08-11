@@ -30,7 +30,7 @@ const ProductsList = () => {
           </Grid>
         </Grid>
 
-        {/* <MultiCardComponent list={products.list3} /> */}
+        {/* <MultiCardComponent list={products.list4} /> */}
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={6}>

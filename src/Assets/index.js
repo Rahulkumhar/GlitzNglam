@@ -12,6 +12,7 @@ import GoldNecklace3 from "./Gold Necklace 3.jpg";
 import GoldNecklace4 from "./Gold Necklace 4.jpg";
 import GoldNecklace5 from "./Gold Necklace 5.jpg";
 import GoldNecklace6 from "./Gold Necklace 6.jpg";
+import GoldBangle from "./GoldBangle.jpg";
 export {
   DiamondNecklace,
   Diamond2,
@@ -27,4 +28,5 @@ export {
   GoldNecklace4,
   GoldNecklace5,
   GoldNecklace6,
+  GoldBangle,
 };

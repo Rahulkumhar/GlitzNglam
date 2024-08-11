@@ -11,6 +11,7 @@ import {
   GoldNecklace4,
   GoldNecklace5,
   GoldNecklace6,
+  GoldBangle,
 } from "../../Assets";
 const products = {
   list1: [
@@ -101,12 +102,12 @@ const products = {
       image: GoldNecklace4,
     },
     {
-      label: "Detailed Choker Gold Necklace Set",
+      label: "Gold Bangles with Minute Details",
       id: 11,
       amount: 4000,
       quantity: 1,
-      description: "22k purity gross weight 57 grams and Matching Earrings ",
-      image: GoldNecklace5,
+      description: "22k purity gross weight 97.52 grams  ",
+      image: GoldBangle,
     },
     {
       label: "Gold Necklace with Hexagon  Pendant",
@@ -118,6 +119,7 @@ const products = {
       image: GoldNecklace6,
     },
   ],
+  list3: [],
 };
 
 export { products };
