@@ -1,6 +1,7 @@
 // src/components/Cart.js
 import React, { useState } from "react";
 import CartItem from "./CartItem";
+import EmptyCartIcon from "../../Assets/Empty Cart.gif";
 import {
   Container,
   Typography,
@@ -10,7 +11,6 @@ import {
   IconButton,
 } from "@mui/material";
 
-import ShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { DataContext } from "../../DataProvider";
 
 const Cart = () => {
@@ -46,15 +46,15 @@ const Cart = () => {
 
   return (
     <Container>
-      <Typography variant="h4" component="h2" gutterBottom>
+      <Typography variant="h4" component="h2" color="#15333D" gutterBottom>
         Shopping Cart
       </Typography>
       {cartItems.length === 0 ? (
         <Box sx={{ textAlign: "center", marginTop: 5, marginBottom: 15 }}>
           <IconButton aria-label="add to cart">
-            <ShoppingCartIcon color="light" sx={{ fontSize: 200 }} />
+            <img src={EmptyCartIcon} alt="Empty Cart" />
           </IconButton>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h6" color="#15333D" gutterBottom>
             Your cart is empty
           </Typography>
           <Button variant="contained" color="primary" href="/products">
