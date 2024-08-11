@@ -9,7 +9,6 @@ import {
   GoldNecklace2,
   GoldNecklace3,
   GoldNecklace4,
-  GoldNecklace5,
   GoldNecklace6,
   GoldBangle,
 } from "../../Assets";
