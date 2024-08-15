@@ -16,7 +16,7 @@ const images = [
   {
     label: "Diamond Sets",
     imgPath:
-      "https://manubhai.in/img/shop_products/9A80970B-0F86-4AD8-ADF2-3AA9F0E7FAC7.jpg",
+      "https://mintdiamonds.com/cdn/shop/files/Mint_Diamonds_Homepage_1600x800.progressive.jpg?v=1613713393",
   },
   {
     label: "Gold Necklace Sets",
@@ -26,12 +26,12 @@ const images = [
   {
     label: "Gold Bracelets and Bangles",
     imgPath:
-      "https://i.pinimg.com/736x/aa/9a/aa/aa9aaab4820b7fb0cd2b4b9a5c1eb2d5.jpg",
+      "https://cdn.caratlane.com/media/static/images/V4/2024/CL/07_JULY/Banner/LatestDesigns/1X.webp",
   },
   {
     label: "Silver Jewellery",
     imgPath:
-      "https://images.cltstatic.com/media/product/350/AT00169-SS0100-oxidised-owning-my-clumsy-nature-bracelet-prd-3-pd.jpg",
+      "https://cdn.caratlane.com/media/static/images/V4/2024/CL/08-AUG/Banner/Rakhi_Curation/2x.webp",
   },
 ];
 

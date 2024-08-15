@@ -18,20 +18,14 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={6}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={6}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={6}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={6}>
-            <SingleCardComponent />
-          </Grid>
+        <Grid container spacing={2}>
+          {products.list3.map((item) => (
+            <Grid item xs={6} md={6}>
+              <SingleCardComponent item={item} key={item?.id} />
+            </Grid>
+          ))}
         </Grid>
+
         <VideoCardComponent item={products.list1} key={products?.list1?.id} />
       </Container>
     </>
