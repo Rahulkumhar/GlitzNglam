@@ -46,7 +46,7 @@ const ProductsList = () => {
           />
         </div>
 
-        <MultiCardComponent list={products.list4} />
+        <MultipleCardsComponent list={products.list4} />
 
         <Grid container spacing={2}>
           <Grid item xs={6} md={6}>

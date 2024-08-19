@@ -23,6 +23,10 @@ import GoldBangle5 from "./Gold Bangle 5.jpg";
 import GoldBangle6 from "./Gold Bangle 6.jpg";
 import DiamondBangle1 from "./Diamond Bangle 1.jpg";
 import DiamondBangle2 from "./Diamond Bangles 2.jpg";
+import DiamondBangle3 from "./Diamond Bangle 3.jpg";
+import DiamondBracelet1 from "./Diamond Bracelet 1.jpg";
+import DiamondBracelet2 from "./Diamond Bracelet 2.jpg";
+import DiamondBracelet3 from "./Diamond Bracelet 3.jpg";
 export {
   DiamondNecklace,
   Diamond2,
@@ -49,4 +53,8 @@ export {
   GoldBangle6,
   DiamondBangle1,
   DiamondBangle2,
+  DiamondBangle3,
+  DiamondBracelet1,
+  DiamondBracelet2,
+  DiamondBracelet3,
 };

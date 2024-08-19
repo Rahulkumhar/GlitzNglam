@@ -7,21 +7,22 @@ const PaperComponent = () => {
     <Paper
       sx={{
         textalign: "center",
-        color: "black",
-        height: 100,
-        lineHeight: "30px",
+        color: "#15333D",
+        fontSize: "35px",
+        height: 250,
+        lineHeight: "75px",
       }}
     >
       <Box
         sx={{
           borderRadius: 2,
           bgcolor: "background.default",
+          textAlign: "center",
         }}
       >
-        <h4>
-          "Jewellery is eternal, it never goes out of fashion, it will always be
-          there"
-        </h4>
+        <h3>
+          "One is never enough of jewellery. Be ready for every occasion. "
+        </h3>
       </Box>
     </Paper>
   );
