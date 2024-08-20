@@ -49,8 +49,6 @@ const Footer = () => {
           <p sx={{ fontSize: "0.8em" }}>
             India’s heritage is often best depicted in places that have managed
             to preserve its history and craftsmanship intact over centuries.
-            Every city in India has their favourite jeweller and each of them
-            has done that one thing differently that makes them simply the best.
             Among the best jewellers in India,Glitz & Glam stands out as one of
             the most unique jewellery houses to have their flagship jewellery
             showroom that caters to this exact same thing.
