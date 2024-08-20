@@ -8,6 +8,7 @@ import MultipleCardsComponent from "../../CommonComponent/MultipleCardsComponent
 import { products } from "./constant";
 import BannerImage from "../../Assets/Bangle Banner.jpg";
 import DiamondBanner from "../../Assets/Diamond Banner.jpg";
+import RingsBanner from "../../Assets/Rings Banner.jpg";
 
 const ProductsList = () => {
   return (
@@ -48,14 +49,15 @@ const ProductsList = () => {
 
         <MultipleCardsComponent list={products.list4} />
 
-        <Grid container spacing={2}>
-          <Grid item xs={6} md={6}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={6} md={6}>
-            <PaperComponent />
-          </Grid>
-        </Grid>
+        <div style={{ textAlign: "center", margin: "20px 0" }}>
+          <img
+            src={RingsBanner}
+            alt="Banner"
+            style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
+          />
+        </div>
+
+        <MultiCardComponent list={products.list5} />
 
         <Grid container spacing={2}>
           <Grid item xs={4} md={4}>

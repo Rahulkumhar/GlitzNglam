@@ -21,11 +21,12 @@ const Footer = () => {
     flex: "1",
     minWidth: "250px",
     marginBottom: "20px",
+    fontSize: "20px",
   };
 
   const footerSectionTitleStyle = {
     marginBottom: "6px",
-    fontSize: "1.2em",
+    fontSize: "1.0em",
   };
 
   const footerLinkStyle = {
@@ -36,9 +37,10 @@ const Footer = () => {
 
   const footerBottomStyle = {
     textAlign: "center",
-    paddingTop: "10px",
+    paddingTop: "8px",
     borderTop: "1px solid #444",
     marginTop: "20px",
+    fontSize: "20px",
   };
 
   return (
@@ -46,9 +48,7 @@ const Footer = () => {
       <div style={footerContainerStyle}>
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>About Us</h4>
-          <p sx={{ fontSize: "0.8em" }}>
-            India’s heritage is often best depicted in places that have managed
-            to preserve its history and craftsmanship intact over centuries.
+          <p sx={{ fontSize: "0.4em" }}>
             Among the best jewellers in India,Glitz & Glam stands out as one of
             the most unique jewellery houses to have their flagship jewellery
             showroom that caters to this exact same thing.

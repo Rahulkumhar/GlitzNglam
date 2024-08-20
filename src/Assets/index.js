@@ -27,6 +27,14 @@ import DiamondBangle3 from "./Diamond Bangle 3.jpg";
 import DiamondBracelet1 from "./Diamond Bracelet 1.jpg";
 import DiamondBracelet2 from "./Diamond Bracelet 2.jpg";
 import DiamondBracelet3 from "./Diamond Bracelet 3.jpg";
+import GoldRing1 from "./Gold Ring 1.jpg";
+import GoldRing2 from "./Gold Ring 2.jpg";
+import GoldRing3 from "./Gold Ring 3.jpg";
+import GoldRing4 from "./Gold Ring 4.jpg";
+import DiamondRing1 from "./Diamond Ring 1.jpeg";
+import DiamondRing2 from "./Diamond Ring 2.jpeg";
+import DiamondRing3 from "./Diamond Ring 3.jpg";
+import DiamondRing4 from "./Diamond Ring 4.jpg";
 export {
   DiamondNecklace,
   Diamond2,
@@ -57,4 +65,12 @@ export {
   DiamondBracelet1,
   DiamondBracelet2,
   DiamondBracelet3,
+  GoldRing1,
+  GoldRing2,
+  GoldRing3,
+  GoldRing4,
+  DiamondRing1,
+  DiamondRing2,
+  DiamondRing3,
+  DiamondRing4,
 };
