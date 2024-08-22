@@ -1,5 +1,8 @@
 // Footer.js
 import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   const footerStyle = {
@@ -62,15 +65,13 @@ const Footer = () => {
         <div style={footerSectionStyle}>
           <h4 style={footerSectionTitleStyle}>Follow Us</h4>
           <a href="https://facebook.com" style={footerLinkStyle}>
-            Facebook
+            <FacebookIcon />
           </a>
-          <br />
           <a href="https://twitter.com" style={footerLinkStyle}>
-            Twitter
+            <XIcon />
           </a>
-          <br />
           <a href="https://instagram.com" style={footerLinkStyle}>
-            Instagram
+            <InstagramIcon />
           </a>
         </div>
       </div>

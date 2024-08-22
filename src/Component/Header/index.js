@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { styled, alpha } from "@mui/material/styles";
+//import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,8 +12,8 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 // import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+//import MailIcon from "@mui/icons-material/Mail";
+//import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
@@ -179,20 +179,20 @@ const Header = () => {
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
-            onClick={() => rediectHome("/")}
+            onClick={() => rediectHome("/products")}
           >
-            Glitz & Glam
+            Our Products
           </Typography>
 
           <Box sx={{ flexGrow: 1 }}>
             <Typography
-              variant="h6"
+              variant="h4"
               noWrap
               component="div"
               sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
-              onClick={() => rediectHome("/products")}
+              onClick={() => rediectHome("/")}
             >
-              Products
+              Glitz & Glam
             </Typography>
           </Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

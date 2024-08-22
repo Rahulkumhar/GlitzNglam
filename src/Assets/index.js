@@ -31,10 +31,14 @@ import GoldRing1 from "./Gold Ring 1.jpg";
 import GoldRing2 from "./Gold Ring 2.jpg";
 import GoldRing3 from "./Gold Ring 3.jpg";
 import GoldRing4 from "./Gold Ring 4.jpg";
+import GoldRing5 from "./Gold Ring 5.jpg";
+import GoldRing6 from "./Gold Ring 6.jpg";
 import DiamondRing1 from "./Diamond Ring 1.jpeg";
 import DiamondRing2 from "./Diamond Ring 2.jpeg";
 import DiamondRing3 from "./Diamond Ring 3.jpg";
 import DiamondRing4 from "./Diamond Ring 4.jpg";
+import DiamondRing5 from "./Diamond Ring 5.jpg";
+import DiamondRing6 from "./Diamond Ring 6.jpg";
 export {
   DiamondNecklace,
   Diamond2,
@@ -69,8 +73,12 @@ export {
   GoldRing2,
   GoldRing3,
   GoldRing4,
+  GoldRing5,
+  GoldRing6,
   DiamondRing1,
   DiamondRing2,
   DiamondRing3,
   DiamondRing4,
+  DiamondRing5,
+  DiamondRing6,
 };

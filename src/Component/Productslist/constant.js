@@ -34,6 +34,10 @@ import {
   DiamondRing2,
   DiamondRing3,
   DiamondRing4,
+  GoldRing5,
+  GoldRing6,
+  DiamondRing6,
+  DiamondRing5,
 } from "../../Assets";
 const products = {
   list1: [
@@ -291,8 +295,24 @@ const products = {
       image: GoldRing4,
     },
     {
-      label: "Diamond Ring ",
+      label: "Antique Gold Ring ",
       id: 5,
+      amount: 180,
+      quantity: 1,
+      description: "22k purity with gross weight of 23 grams ",
+      image: GoldRing5,
+    },
+    {
+      label: "Antique Gold Ring ",
+      id: 6,
+      amount: 142,
+      quantity: 1,
+      description: "22k purity with gross weight of 17 grams ",
+      image: GoldRing6,
+    },
+    {
+      label: "Diamond Ring ",
+      id: 7,
       amount: 96,
       quantity: 1,
       description: "18k purity with gross weight of 5 grams ",
@@ -300,7 +320,7 @@ const products = {
     },
     {
       label: "Diamond Ring",
-      id: 6,
+      id: 8,
       amount: 73,
       quantity: 1,
       description: "18k purity with gross weight of 4 grams ",
@@ -308,7 +328,7 @@ const products = {
     },
     {
       label: "Real Diamond Ring ",
-      id: 7,
+      id: 9,
       amount: 240,
       quantity: 1,
       description: "18k purity with gross weight of 12 grams ",
@@ -316,11 +336,27 @@ const products = {
     },
     {
       label: "Real Diamond Ring ",
-      id: 4,
+      id: 10,
       amount: 76,
       quantity: 1,
       description: "18k purity with gross weight of 3 grams ",
       image: DiamondRing4,
+    },
+    {
+      label: "Real Diamond Ring ",
+      id: 11,
+      amount: 81,
+      quantity: 1,
+      description: "18k purity with gross weight of 6 grams ",
+      image: DiamondRing5,
+    },
+    {
+      label: "Real Diamond Ring ",
+      id: 12,
+      amount: 78,
+      quantity: 1,
+      description: "18k purity with gross weight of 5 grams ",
+      image: DiamondRing6,
     },
   ],
 };
