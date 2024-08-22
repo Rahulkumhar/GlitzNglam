@@ -66,7 +66,7 @@ const products = {
       image: Diamond3,
     },
     {
-      label: "Double Layer Diamond Necklace with Green Rubies",
+      label: "Double Layer Diamond Necklace Green Rubies",
       id: 4,
       amount: 16000,
       quantity: 1,
@@ -82,7 +82,7 @@ const products = {
       image: Diamond7,
     },
     {
-      label: "Diamond Necklace with Red Rubies and Drop Pattern",
+      label: "Diamond Necklace with Red Rubies & Drop",
       id: 6,
       amount: 17000,
       quantity: 1,

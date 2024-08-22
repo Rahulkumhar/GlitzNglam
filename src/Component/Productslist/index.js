@@ -9,6 +9,7 @@ import { products } from "./constant";
 import BannerImage from "../../Assets/Bangle Banner.jpg";
 import DiamondBanner from "../../Assets/Diamond Banner.jpg";
 import RingsBanner from "../../Assets/Rings Banner.jpg";
+import { DiamondRing4, GoldNecklace7 } from "../../Assets";
 
 const ProductsList = () => {
   return (

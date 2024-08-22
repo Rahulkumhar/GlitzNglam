@@ -18,7 +18,7 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
           {products.list3.map((item) => (
             <Grid item xs={6} md={6}>
               <SingleCardComponent item={item} key={item?.id} />
