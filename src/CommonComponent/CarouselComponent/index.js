@@ -2,8 +2,6 @@ import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MobileStepper from "@mui/material/MobileStepper";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -29,9 +27,9 @@ const images = [
       "https://cdn.caratlane.com/media/static/images/V4/2024/CL/07_JULY/Banner/LatestDesigns/1X.webp",
   },
   {
-    label: "Silver Jewellery",
+    label: "Stylish Jewellery",
     imgPath:
-      "https://cdn.caratlane.com/media/static/images/V4/2024/CL/08-AUG/Banner/Rakhi_Curation/2x.webp",
+      "https://sohnaa.com/cdn/shop/collections/Banner_29_67762016-2c7f-423c-a714-b1133e112a7a.jpg?v=1703846645&width=2000",
   },
 ];
 
@@ -54,19 +52,6 @@ const CarouselComponent = () => {
 
   return (
     <Box sx={{ flexGrow: 1, marginTop: 10 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          height: 60,
-          pl: 2,
-          bgcolor: "background.default",
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}

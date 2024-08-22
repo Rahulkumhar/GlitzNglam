@@ -4,24 +4,23 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+//import FavoriteIcon from "@mui/icons-material/Favorite";
+//import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Necklace from "../../Assets/necklace.jpg";
 import { Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../../DataProvider";
-import ShareIcon from "@mui/icons-material/Share";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+//import ShareIcon from "@mui/icons-material/Share";
+//import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const CardComponent = ({ item, id }) => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const { data, updateData } = useContext(DataContext);
-  const [favoriteButton, setFavoriteButton] = useState(true);
+  //const [favoriteButton, setFavoriteButton] = useState(true);
 
   useEffect(() => {
     if (Array.isArray(data)) setItems(data);
@@ -48,16 +47,12 @@ const CardComponent = ({ item, id }) => {
   return (
     <Card sx={{ width: "100%" }}>
       <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        action={<IconButton aria-label="settings"></IconButton>}
         title={item?.label}
       />
       <CardMedia
         component="img"
-        height="194"
+        height="200"
         image={item?.image !== "" ? item?.image : Necklace}
         alt={item?.label}
       />
@@ -77,15 +72,6 @@ const CardComponent = ({ item, id }) => {
           </IconButton>{" "}
           {checkIsAlreadyInCart() ? "Remove from cart" : "Add to cart"}
         </Button>
-        <IconButton
-          aria-label="add to favorites"
-          onClick={() => setFavoriteButton(!favoriteButton)}
-        >
-          {favoriteButton ? <FavoriteBorderIcon /> : <FavoriteIcon />}
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
       </CardActions>
     </Card>
   );
