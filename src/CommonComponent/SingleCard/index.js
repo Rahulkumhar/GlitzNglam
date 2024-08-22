@@ -1,17 +1,13 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import Necklace from "../../Assets/necklace.jpg";
 
-const SingleCardComponent = () => {
+const SingleCardComponent = ({ item }) => {
   return (
-    <Card sx={{ maxWidth: 600, margin: "10px" }}>
-      <CardMedia
-        sx={{ height: 300 }}
-        image={Necklace}
-        title="Title of the Image"
-      />
-    </Card>
+    <CardMedia
+      sx={{ height: 300, maxWidth: 950, margin: 4, padding: 4 }}
+      image={item.image}
+      title="Title of the Image"
+    />
   );
 };
 

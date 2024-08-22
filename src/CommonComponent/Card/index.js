@@ -20,6 +20,7 @@ const CardComponent = ({ item, id }) => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const { data, updateData } = useContext(DataContext);
+  // const classes = useStyles();
   //const [favoriteButton, setFavoriteButton] = useState(true);
 
   useEffect(() => {
@@ -57,18 +58,18 @@ const CardComponent = ({ item, id }) => {
         alt={item?.label}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="white">
           {item?.description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <Button
+          sx={{ background: "#15333d" }}
           variant="contained"
-          color="success"
           onClick={() => addToCart(item)}
         >
-          <IconButton aria-label="add to cart">
-            <ShoppingCartIcon color="light" />
+          <IconButton color="white" aria-label="add to cart">
+            <ShoppingCartIcon color="white" />
           </IconButton>{" "}
           {checkIsAlreadyInCart() ? "Remove from cart" : "Add to cart"}
         </Button>
