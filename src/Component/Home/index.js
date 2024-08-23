@@ -5,6 +5,7 @@ import CarouselComponent from "../../CommonComponent/CarouselComponent";
 import VideoCardComponent from "../../CommonComponent/VideoCardComponent";
 import { products } from "../Productslist/constant";
 import SingleCardComponent from "../../CommonComponent/SingleCard";
+import ComplexButton from "../../CommonComponent/ComplexButton";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-
+        <ComplexButton />
         <VideoCardComponent item={products.list1} key={products?.list1?.id} />
       </Container>
     </>
