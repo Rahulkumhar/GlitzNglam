@@ -4,9 +4,9 @@ import CardMedia from "@mui/material/CardMedia";
 const SingleCardComponent = ({ item }) => {
   return (
     <CardMedia
-      sx={{ height: 300, maxWidth: 950, margin: 4, padding: 4 }}
+      sx={{ height: 400, maxWidth: 950, margin: 4, padding: 20 }}
       image={item.image}
-      title="Title of the Image"
+      title={item.label}
     />
   );
 };

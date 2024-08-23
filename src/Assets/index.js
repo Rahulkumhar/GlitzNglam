@@ -39,6 +39,10 @@ import DiamondRing3 from "./Diamond Ring 3.jpg";
 import DiamondRing4 from "./Diamond Ring 4.jpg";
 import DiamondRing5 from "./Diamond Ring 5.jpg";
 import DiamondRing6 from "./Diamond Ring 6.jpg";
+import SingleCardPhoto1 from "./Single Card Photo 1.jpg";
+import SingleCardPhoto2 from "./Single Card Photo 2.jpg";
+import SingleCardPhoto3 from "./Single Card Photo 3.jpg";
+import SingleCardPhoto4 from "./Single Card Photo 4.jpg";
 export {
   DiamondNecklace,
   Diamond2,
@@ -81,4 +85,8 @@ export {
   DiamondRing4,
   DiamondRing5,
   DiamondRing6,
+  SingleCardPhoto1,
+  SingleCardPhoto2,
+  SingleCardPhoto3,
+  SingleCardPhoto4,
 };

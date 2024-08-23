@@ -4,7 +4,7 @@ import CardComponent from "../Card";
 
 const MultiCardComponent = ({ list }) => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="x-lg">
       <Grid
         container
         spacing={2}
@@ -12,7 +12,7 @@ const MultiCardComponent = ({ list }) => {
         style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
       >
         {list?.map((item) => (
-          <Grid item xs={6} md={6}>
+          <Grid item xs={3} md={3}>
             <CardComponent item={item} key={item?.id} />
           </Grid>
         ))}
