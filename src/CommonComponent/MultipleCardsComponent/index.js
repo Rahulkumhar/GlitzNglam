@@ -4,7 +4,7 @@ import CardComponent from "../Card";
 
 const MultipleCardsComponent = ({ list }) => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="x-lg">
       <Grid container spacing={2}>
         {list.map((item) => (
           <Grid item xs={4} md={4}>

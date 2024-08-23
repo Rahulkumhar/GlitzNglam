@@ -24,15 +24,11 @@ const ProductsList = () => {
         <MultiCardComponent list={products.list1} />
 
         <Grid container spacing={2} marginBottom={2}>
-          <Grid item xs={4} md={4}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <PaperComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <SingleCardComponent />
-          </Grid>
+          {products.list3.map((item) => (
+            <Grid item xs={6} md={6}>
+              <SingleCardComponent item={item} key={item.id} />
+            </Grid>
+          ))}
         </Grid>
         <Grid spacing={2}>
           <Grid item xs={4} md={4} marginBottom={2}>
@@ -60,15 +56,11 @@ const ProductsList = () => {
         <MultiCardComponent list={products.list5} />
 
         <Grid container spacing={2}>
-          <Grid item xs={4} md={4}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <SingleCardComponent />
-          </Grid>
-          <Grid item xs={4} md={4}>
-            <SingleCardComponent />
-          </Grid>
+          {products.list4.map((item) => (
+            <Grid item xs={4} md={4}>
+              <SingleCardComponent item={item} key={item.id} />
+            </Grid>
+          ))}
         </Grid>
 
         <CarouselComponent />
