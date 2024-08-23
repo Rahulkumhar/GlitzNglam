@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   {
@@ -87,6 +88,10 @@ const ImageMarked = styled("span")(({ theme }) => ({
 }));
 
 export default function ButtonBaseDemo() {
+  const navigate = useNavigate();
+  const rediectProduct = (routeVal) => {
+    navigate(routeVal);
+  };
   return (
     <Box
       sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
@@ -106,6 +111,7 @@ export default function ButtonBaseDemo() {
               component="span"
               variant="subtitle1"
               color="inherit"
+              onClick={() => rediectProduct("/products")}
               sx={{
                 position: "relative",
                 p: 4,
