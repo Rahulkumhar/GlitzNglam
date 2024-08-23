@@ -5,15 +5,12 @@ import {
   Diamond8,
   Diamond7,
   Diamond6,
-  Diamond9,
-  Diamond10,
   GoldNecklace,
   GoldNecklace2,
   GoldNecklace3,
   GoldNecklace4,
   GoldNecklace5,
   GoldNecklace6,
-  GoldNecklace7,
   GoldBangle,
   GoldBangle2,
   GoldBangle3,
@@ -38,6 +35,10 @@ import {
   GoldRing6,
   DiamondRing6,
   DiamondRing5,
+  SingleCardPhoto1,
+  SingleCardPhoto2,
+  SingleCardPhoto3,
+  SingleCardPhoto4,
 } from "../../Assets";
 const products = {
   list1: [
@@ -147,20 +148,24 @@ const products = {
   ],
   list3: [
     {
+      label: "Gold Necklaces",
       id: 1,
-      image: GoldNecklace7,
+      image: SingleCardPhoto1,
     },
     {
+      label: "Diamond Neckalces",
       id: 2,
-      image: GoldNecklace5,
+      image: SingleCardPhoto2,
     },
     {
+      label: "Gold and Diamond Rings",
       id: 3,
-      image: Diamond9,
+      image: SingleCardPhoto3,
     },
     {
+      label: "Bracelets and Bangles",
       id: 4,
-      image: Diamond10,
+      image: SingleCardPhoto4,
     },
   ],
   list4: [
