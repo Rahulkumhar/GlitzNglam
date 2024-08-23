@@ -171,7 +171,10 @@ const Header = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="fixed"
-        sx={{ backgroundColor: "#15333d", color: "#f4e9e0" }}
+        sx={{
+          backgroundColor: "#15333d",
+          color: "#f4e9e0",
+        }}
       >
         <Toolbar>
           <Typography
