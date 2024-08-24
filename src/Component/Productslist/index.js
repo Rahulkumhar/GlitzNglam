@@ -3,7 +3,6 @@ import { Grid, Container } from "@mui/material";
 import CarouselComponent from "../../CommonComponent/CarouselComponent";
 import MultiCardComponent from "../../CommonComponent/MultiCardComponent";
 import SingleCardComponent from "../../CommonComponent/SingleCard";
-import PaperComponent from "../../CommonComponent/PaperComponent";
 import MultipleCardsComponent from "../../CommonComponent/MultipleCardsComponent";
 import { products } from "./constant";
 import BannerImage from "../../Assets/Bangle Banner.jpg";
