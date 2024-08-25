@@ -6,8 +6,6 @@ import Diamond5 from "./Diamond 5.jpg";
 import Diamond6 from "./Diamond 6.jpg";
 import Diamond7 from "./Diamond 7.jpg";
 import Diamond8 from "./Diamond 8.jpg";
-import Diamond9 from "./Diamond 9.jpg";
-import Diamond10 from "./Diamond 10.jpg";
 import GoldNecklace from "./Gold Necklace.jpg";
 import GoldNecklace2 from "./Gold Necklace 2.jpg";
 import GoldNecklace3 from "./Gold Necklace 3.jpg";
@@ -52,8 +50,6 @@ export {
   Diamond6,
   Diamond7,
   Diamond8,
-  Diamond9,
-  Diamond10,
   GoldNecklace,
   GoldNecklace2,
   GoldNecklace3,
