@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import CartItem from "./CartItem";
 import EmptyCartIcon from "../../Assets/Empty Cart.gif";
+
 import {
   Container,
   Typography,
@@ -45,7 +46,7 @@ const Cart = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{ margin: 10 }}>
       <Typography variant="h4" component="h2" color="#15333D" gutterBottom>
         Shopping Cart
       </Typography>
@@ -77,6 +78,14 @@ const Cart = () => {
           >
             <Typography variant="h5">Total: ${getTotalPrice()}</Typography>
           </Paper>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ margin: 10 }}
+            href="/thankYou"
+          >
+            Check Out
+          </Button>
         </>
       )}
     </Container>
