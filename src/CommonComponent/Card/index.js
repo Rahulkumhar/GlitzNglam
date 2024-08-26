@@ -58,7 +58,7 @@ const CardComponent = ({ item, id }) => {
         alt={item?.label}
       />
       <CardContent>
-        <Typography variant="body2" color="white">
+        <Typography variant="body2" color="black">
           {item?.description}
         </Typography>
       </CardContent>
@@ -69,7 +69,7 @@ const CardComponent = ({ item, id }) => {
           onClick={() => addToCart(item)}
         >
           <IconButton color="white" aria-label="add to cart">
-            <ShoppingCartIcon color="white" />
+            <ShoppingCartIcon color="info" />
           </IconButton>{" "}
           {checkIsAlreadyInCart() ? "Remove from cart" : "Add to cart"}
         </Button>

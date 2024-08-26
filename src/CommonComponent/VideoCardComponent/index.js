@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import JewelleryVideo from "../../Assets/JewelleryVideo.mp4";
-import PaperComponent from "../PaperComponent";
+// import PaperComponent from "../PaperComponent";
 
 const VideoCardComponent = () => {
   return (
@@ -11,9 +11,9 @@ const VideoCardComponent = () => {
           <source src={JewelleryVideo} />
         </video>
       </Grid>
-      <Grid item xs={4} md={4}>
+      {/* <Grid item xs={4} md={4}>
         <PaperComponent />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
