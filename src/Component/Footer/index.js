@@ -33,7 +33,7 @@ const Footer = () => {
   };
 
   const footerLinkStyle = {
-    margin: "2px 0",
+    margin: " 0 10px 0",
     color: "#bbb",
     textDecoration: "none",
   };
