@@ -18,6 +18,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../../DataProvider";
+import { Container } from "@mui/system";
 
 // const Search = styled('div')(({ theme }) => ({
 //   position: 'relative',
@@ -76,10 +77,6 @@ const Header = () => {
       setCartCount(JSON.parse(storedItems).length);
     }
   }, []);
-  console.log("data", data);
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -149,7 +146,7 @@ const Header = () => {
         <p>Cart</p>
       </MenuItem>
 
-      <MenuItem onClick={handleProfileMenuOpen}>
+      {/* <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -160,7 +157,7 @@ const Header = () => {
           <AccountCircle />
         </IconButton>
         <p>{login?.email}</p>
-      </MenuItem>
+      </MenuItem> */}
     </Menu>
   );
 
@@ -168,85 +165,66 @@ const Header = () => {
     navigate(routeVal);
   };
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="fixed"
-        sx={{
-          backgroundColor: "#15333d",
-          color: "#f4e9e0",
-        }}
-      >
-        <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
-            onClick={() => rediectHome("/products")}
-          >
-            Our Products
-          </Typography>
-
-          <Box sx={{ flexGrow: 1 }}>
+    <Container maxWidth={"xl"}>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar
+          position="fixed"
+          sx={{
+            backgroundColor: "#15333d",
+            color: "#f4e9e0",
+          }}
+        >
+          <Toolbar>
             <Typography
-              variant="h4"
+              variant="h6"
               noWrap
               component="div"
               sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
-              onClick={() => rediectHome("/")}
+              onClick={() => rediectHome("/products")}
             >
-              Glitz & Glam
+              Our Products
             </Typography>
-          </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-              onClick={() => rediectHome("/cart")}
-            >
-              <Badge badgeContent={data?.length} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-            {/* <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box>
+
+            <Box sx={{ flexGrow: 1 }}>
+              <Typography
+                variant="h4"
+                noWrap
+                component="div"
+                sx={{ display: { xs: "none", sm: "block" }, cursor: "pointer" }}
+                onClick={() => rediectHome("/")}
+              >
+                Glitz & Glam
+              </Typography>
+            </Box>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+                onClick={() => rediectHome("/cart")}
+              >
+                <Badge badgeContent={data?.length} color="error">
+                  <ShoppingCartIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={() => rediectHome("/login")}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+      </Box>
+    </Container>
   );
 };
 export default Header;
