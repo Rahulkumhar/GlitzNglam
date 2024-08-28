@@ -8,8 +8,11 @@ import {
   Avatar,
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import { useNavigate } from "react-router-dom";
+// import axios from 'axios';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -27,7 +30,24 @@ const Login = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    // try {
+    //   // API call to login
+    //   const response = await axios.post('https://your-backend-api.com/login', {
+    //     email,
+    //     password,
+    //   });
 
+    //   // Assuming the token is in response.data.token
+    //   const token = response.data.token;
+
+    //   // Store the token in localStorage
+    //   localStorage.setItem('authToken', token);
+
+    //   alert('Login Successful!');
+    //   // Optionally, redirect to a dashboard or another page
+    // } catch (error) {
+    //   setErrorMessage('Invalid email or password. Please try again.');
+    // }
     // Retrieve sign-up data from localStorage
     const savedData = JSON.parse(localStorage.getItem("signUpData"));
 
@@ -38,6 +58,7 @@ const Login = () => {
       savedData.password === password
     ) {
       alert("Login Successful!");
+      navigate("/");
       // Optionally redirect to another page or store login state
     } else {
       setErrorMessage("Invalid email or password. Please try again.");
