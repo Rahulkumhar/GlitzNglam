@@ -94,6 +94,8 @@ const Header = () => {
   const logout = () => {
     localStorage.removeItem("loginDetails");
     localStorage.removeItem("cartProducts");
+    // localStorage.removeItem('authToken');
+    console.log("You have been logged out.");
     setLogin({});
     rediectHome("/login");
   };
@@ -164,6 +166,7 @@ const Header = () => {
   const rediectHome = (routeVal) => {
     navigate(routeVal);
   };
+
   return (
     <Container maxWidth={"xl"}>
       <Box sx={{ flexGrow: 1 }}>
