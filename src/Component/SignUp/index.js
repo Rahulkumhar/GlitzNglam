@@ -1,179 +1,160 @@
 import React, { useState } from "react";
 import {
-  Button,
   TextField,
-  Container,
+  Button,
+  Box,
   Typography,
-  makeStyles,
-  Grid,
   Paper,
-  IconButton,
-  InputAdornment,
-} from "@material-ui/core";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import AnimateButton from "../../CommonComponent/AnimateButton";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: theme.spacing(2),
-  },
-  form: {
-    width: "100%", // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
-
-const validationSchema = Yup.object({
-  email: Yup.string().email("Invalid email address").required("Required"),
-  password: Yup.string().required("Required"),
-});
+  Avatar,
+  Grid,
+} from "@mui/material";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 const SignUp = () => {
-  const classes = useStyles();
-  const [showPassword, setShowPassword] = useState(false);
+  // State to store form data
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate password and confirmPassword
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match!");
+      return;
+    }
+
+    // Save form data to localStorage
+    localStorage.setItem("signUpData", JSON.stringify(formData));
+
+    alert("Sign-Up Successful!");
+    console.log("Saved Data:", formData);
+
+    // Optionally clear the form after submission
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
 
   return (
-    <Container maxWidth="x-lg" sx={{ marginTop: 5 }}>
-      <Container maxWidth="xs">
-        <Grid container direction="column" justifyContent="center" spacing={2}>
-          <Paper className={classes.paper}>
-            <Grid item xs={12}>
-              <Container component="main" maxWidth="xs">
-                <Typography
-                  component="h1"
-                  variant="h5"
-                  align="center"
-                  gutterBottom
-                >
-                  Sign Up
-                </Typography>
-                <Formik
-                  initialValues={{ email: "", password: "" }}
-                  validationSchema={validationSchema}
-                  onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                      localStorage.setItem(
-                        "signUpDetails",
-                        JSON.stringify(values)
-                      );
-                      console.log(JSON.stringify(values, null, 2));
-                      setSubmitting(false);
-                    }, 400);
-                  }}
-                >
-                  {({ isSubmitting }) => (
-                    <Form className={classes.form}>
-                      <Field
-                        as={TextField}
-                        variant="outlined"
-                        margin="normal"
-                        fullWidth
-                        id="name"
-                        label="Name"
-                        name="name"
-                        autoComplete="name"
-                        autoFocus
-                        helperText={<ErrorMessage name="name" />}
-                      />
-                      <Field
-                        as={TextField}
-                        variant="outlined"
-                        margin="normal"
-                        fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="email"
-                        autoFocus
-                        helperText={<ErrorMessage name="email" />}
-                        error={Boolean(<ErrorMessage name="email" />)}
-                      />
-                      <Field
-                        as={TextField}
-                        variant="outlined"
-                        margin="normal"
-                        fullWidth
-                        name="createPassword"
-                        label="Create Password"
-                        type="password"
-                        id="createPassword"
-                        autoComplete="current-password"
-                        helperText={<ErrorMessage name="createPassword" />}
-                        error={Boolean(<ErrorMessage name="createPassword" />)}
-                      />
-                      <Field
-                        as={TextField}
-                        variant="outlined"
-                        margin="normal"
-                        fullWidth
-                        name="confirmPassword"
-                        label="Confirm Password"
-                        type="password"
-                        id="confirmPassword"
-                        autoComplete="current-password"
-                        helperText={<ErrorMessage name="confirmPassword" />}
-                        error={Boolean(<ErrorMessage name="confirmPassword" />)}
-                      />
-                      {/* <OutlinedInput
-                        id="outlined-adornment-password"
-                        type={showPassword ? "text" : "password"}
-                        endAdornment={
-                          <InputAdornment position="end">
-                            <IconButton
-                              aria-label="toggle password visibility"
-                              onClick={handleClickShowPassword}
-                              onMouseDown={handleMouseDownPassword}
-                              edge="end"
-                            >
-                              {showPassword ? (
-                                <VisibilityOff />
-                              ) : (
-                                <Visibility />
-                              )}
-                            </IconButton>
-                          </InputAdornment>
-                        }
-                        label="Password"
-                      /> */}
-                      <AnimateButton>
-                        <Button
-                          type="submit"
-                          fullWidth
-                          variant="contained"
-                          color="primary"
-                          className={classes.submit}
-                          disabled={isSubmitting}
-                        >
-                          Sign In
-                        </Button>
-                      </AnimateButton>
-                    </Form>
-                  )}
-                </Formik>
-              </Container>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      height="100vh"
+      bgcolor="#f0f0f0"
+    >
+      <Paper elevation={3} sx={{ padding: 4, maxWidth: 500 }}>
+        <Box display="flex" flexDirection="column" alignItems="center">
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography variant="h5" gutterBottom>
+            Sign Up
+          </Typography>
+          <form noValidate onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="fname"
+                  name="firstName"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  autoFocus
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="lastName"
+                  label="Last Name"
+                  name="lastName"
+                  autoComplete="lname"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirmPassword"
+                  autoComplete="new-password"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                />
+              </Grid>
             </Grid>
-          </Paper>
-        </Grid>
-      </Container>
-    </Container>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign Up
+            </Button>
+          </form>
+        </Box>
+      </Paper>
+    </Box>
   );
 };
 
